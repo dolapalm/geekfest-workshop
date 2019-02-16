@@ -10,17 +10,18 @@ Add a new config map resource to the manifest;
 
 *kuard-deployment.yml*
 ```yaml
-  apiVersion: v1
-  kind: ConfigMap
-  metadata:
-    name: my-config
-  data:
-      another-param: another-value
-      extra-param: extra-value
-      my-config.txt: |
-        # This is a sample config file that I might use to configure an application
-        parameter1 = value1
-        parameter2 = value2
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: my-config
+data:
+    another-param: another-value
+    extra-param: extra-value
+    my-config.txt: |
+      # This is a sample config file that I might use to configure an application
+      parameter1 = value1
+      parameter2 = value2
   
 ```
 
