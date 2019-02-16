@@ -8,7 +8,7 @@ To enable a persitent volume, we first define the volume and its `hostPath`, the
 volumes:
   - name: "kuard-data"
     hostPath:
-      path: "/var/lib/kuard"
+      path: "/home/docker"
 
 
 # Add the following to your container manifest
@@ -42,7 +42,7 @@ spec:
       volumes:
         - name: "kuard-data"
           hostPath:
-            path: "/var/lib/kuard"
+            path: "/home/docker"
       containers:
         - image: gcr.io/kuar-demo/kuard-amd64:1
           name: kuard
@@ -113,7 +113,7 @@ kubectl apply -f kuard-deployment.yml
 Lets test the volume mount by adding a file into the volume and then see that it can be found within the container.
 - Create a file in our minikube VM 
 ```
-minikube ssh sudo touch /var/lib/kuard/test
+minikube ssh sudo touch /home/docker/test
 ```
 - Open the demo in the browser and navigate to `file system browser` then navigate to `/data` and you should see the `test` file.
 - Delete the current deployment
