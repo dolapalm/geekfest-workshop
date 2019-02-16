@@ -175,7 +175,7 @@ Lets test the ConfigMap mount and see that it can be found within the container.
     - another-param
     - extra-param
     - my-config.txt
-- Open the demo in the browser and navigate to `Environment`.  There should be an environment variable `ANOTHER_PARAM` and it's value `another-value`.
+- Open the demo in the browser and navigate to `Server Env`.  There should be an environment variable `ANOTHER_PARAM` and it's value `another-value`.  Notice it's in the name being capitalise as it's the name mentioned in the `env` section of the container manifest.
 
 
 More on ConfigMap: https://kubernetes.io/docs/tasks/configure-pod-container/configure-pod-configmap/
