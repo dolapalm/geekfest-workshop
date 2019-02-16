@@ -113,7 +113,7 @@ kubectl apply -f kuard-deployment.yml
 Lets test the volume mount by adding a file into the volume and then see that it can be found within the container.
 - Create a file in our minikube VM 
 ```
-minikube ssh sudo touch /home/docker/test
+minikube ssh echo "hello >/home/docker/test"
 ```
 - Open the demo in the browser and navigate to `file system browser` then navigate to `/data` and you should see the `test` file.
 - Delete the current deployment
