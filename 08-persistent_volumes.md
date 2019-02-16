@@ -116,6 +116,7 @@ Lets test the volume mount by adding a file into the volume and then see that it
 minikube ssh echo "hello >/home/docker/test"
 ```
 - Open the demo in the browser and navigate to `file system browser` then navigate to `/data` and you should see the `test` file.
+- In the `test` file, you should see the `hello` string we just written on the VM.
 - Delete the current deployment
 ```
 kubectl delete deployment kuard-deployment
