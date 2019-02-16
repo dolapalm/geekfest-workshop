@@ -11,7 +11,7 @@ Before creating a deployment, delete your current running pod as we will now red
 Modify your pod manifest from the previous step to turn it into a deployment.
 
 *Notice the spec.containers section is essentially what remains from the pod definiton we had before.*
-```
+```yaml
 apiVersion: apps/v1
 kind: Deployment
 metadata:
