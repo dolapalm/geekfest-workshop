@@ -20,7 +20,7 @@ spec:
       volumes:
         - name: "kuard-data"
           hostPath:
-            path: "/var/lib/kuard"
+            path: "/home/docker"
         - name: config-volume
           configMap:
             name: my-config
