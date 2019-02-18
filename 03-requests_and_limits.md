@@ -1,7 +1,7 @@
 # Requests
 
 The `Request` section of a container represent the minimal amount of resource 
-that Kubernetes should plan for you container under high load.
+that Kubernetes should plan for your container under high load.
 
 It is attached to the container section, not the pod, as it's the container that
 gets assigned those resources.
