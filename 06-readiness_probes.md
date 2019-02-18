@@ -85,16 +85,17 @@ kubectl apply -f kuard-deployment.yml
 ``` 
 
 ## See it in action
-run `kubectl port-forward deployment/kuard-deployment 8080:8080`
-open your browser to `localhost:8080`
+Run `kubectl port-forward deployment/kuard-deployment 8080:8080`.
+
+Open your browser to `localhost:8080`.
 
 Here you can go to the Readiness probe tab and see the probes that have targeted the service. Clicking `fail` and leaving it in that state for a while you will be able to show us a different reaction.
 
-You can see this by running `kubectl get pods` in another terminal window  and noticing that the restarts column is not changing however kubernetes has not listed the container as ready as we see by the 0/1 in the ready column. This will inform any load balancers not to direct traffic to this pod.
+You can see this by running `kubectl get pods` in another terminal window  and noticing that the restarts column is not changing. However kubernetes has not listed the container as ready as we see by the 0/1 in the ready column. This will inform any load balancers not to direct traffic to this pod.
 
 Once you are done with this exercise you can click `succeed` in the browser readiness tab to put the pod back in a healthy state. You can then run `kubectl get pods` and see that it has returned to 1/1 in the READY column.
 
-You can now cancel the port-forward `ctrl c`
+You can now cancel the port-forward `ctrl c`.
 
 *More on [Readiness Probe](https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-probes/#define-readiness-probes)*
 
