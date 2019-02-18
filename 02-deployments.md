@@ -73,11 +73,10 @@ Now lets try and update the container that is running to observe the rolling upd
 ```
 kubectl edit deployment kuard-deployment
 ```
-Then hit `i` to edit the section of the file that says:
+Within your editor, edit the section of the file that says:
 `- image: gcr.io/kuar-demo/kuard-amd64:1` to `- image: gcr.io/kuar-demo/kuard-amd64:2`
 
-This will change the version running and we can observe how kubernetes handles it.
-you can then save and exit the editor by hitting `ESC` then `:wq` `enter`.
+Save your file and exit.
 
 ```
 kubectl get all
