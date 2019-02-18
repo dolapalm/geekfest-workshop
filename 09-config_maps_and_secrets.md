@@ -6,9 +6,7 @@ ConfigMap are made to store (*drumroll*) configurations!
 It's a Kubernetes resource made to store a "key:value" pair.
 A good example of a configuration are environment variables.
 
-Add a new config map resource to the manifest;
-
-*kuard-deployment.yml*
+Add a new config map resource to the manifest.
 ```yaml
 ---
 apiVersion: v1
@@ -22,7 +20,6 @@ data:
       # This is a sample config file that I might use to configure an application
       parameter1 = value1
       parameter2 = value2
-  
 ```
 
 ```
@@ -56,7 +53,7 @@ ConfigMap can be referenced into Pods in 2 ways;
       mountPath: /config
     ```
 
-
+*kuard-deployment.yml*
 ```yaml
 apiVersion: apps/v1
 kind: Deployment
