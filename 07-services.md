@@ -43,6 +43,7 @@ spec:
   type: LoadBalancer
 ```
 
+*kuard-deployment.yml*
 ``` yaml
 apiVersion: apps/v1
 kind: Deployment
@@ -139,7 +140,7 @@ kuard-service   LoadBalancer   10.106.198.147   <pending>     8080:31076/TCP   7
 kubernetes      ClusterIP      10.96.0.1        <none>        443/TCP          1d        <none>
 ```
 
-Now you can access the service through an URL;
+Now you can access the service through an URL.
 
 `minikube service kuard-service --url`
 
