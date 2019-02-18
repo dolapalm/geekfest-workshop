@@ -78,8 +78,9 @@ kubectl apply -f kuard-deployment.yml
 ``` 
 
 ## See it in action
-run `kubectl port-forward deployment/kuard-deployment 8080:8080`
-open your browser to `localhost:8080`
+Run `kubectl port-forward deployment/kuard-deployment 8080:8080`.
+
+Open your browser to `localhost:8080`.
 
 Here you can go to the liveness probe tab and see the probes that have targeted the service.
 
@@ -87,7 +88,7 @@ Clicking `fail` and leaving it in that state for the time required in our above 
 
 You can see this by running `kubectl get pods` in a terminal window and noticing the restarts column incremented on one of the pods.
 
-Once you are done this you can stop the port forwarding `ctrl c`
+Once you are done this you can stop the port forwarding `ctrl c`.
 
 *More on [Liveness Probe](https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-probes/#define-a-liveness-http-request)*
 
