@@ -64,7 +64,7 @@ kubectl apply -f kuard-deployment.yml
 ```
 
 ### See it in action
-To view how labels work, we'll create a few deployments
+To view how labels work, we'll create a few deployments.
 ```bash
 kubectl run kuard-staging --image=gcr.io/kuar-demo/kuard-amd64:2 --replicas=1 --labels="env=staging,app=kuard,ver=2" 
 kubectl run db-prod --image=gcr.io/kuar-demo/kuard-amd64:1 --replicas=2 --labels="env=prod,app=db,ver=1" 
@@ -151,7 +151,7 @@ More on annotations: https://kubernetes.io/docs/concepts/overview/working-with-o
 
 More on nginx annotations: https://github.com/kubernetes/ingress-nginx/blob/master/docs/user-guide/nginx-configuration/annotations.md
 
-### Adding an annotations through manifest
+### Adding an annotation through manifest
 
 An annotation is added in the metadata section of the manifest:
 ```yaml
